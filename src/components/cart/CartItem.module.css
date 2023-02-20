@@ -1,0 +1,8 @@
+.cartitem {
+    background: var(--primart-light);
+    border: 2px solid black;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
