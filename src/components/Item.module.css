@@ -1,0 +1,6 @@
+.item {
+    border: 2px solid var(--secondary-color);
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
