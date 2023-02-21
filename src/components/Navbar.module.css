@@ -9,4 +9,8 @@
 
 .nav button {
     background: var(--accent-color);
+    border: none;
+    padding: 6px 14px;
+    border-radius: var(--radius);
+    cursor: pointer;
 }

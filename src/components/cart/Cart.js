@@ -7,6 +7,7 @@ const Cart = () => {
   const itemsArray = useSelector((state) => state.cart.items);
   return (
     <div className={styles.cart}>
+      <h2 className={styles.heading}>Your Shopping Cart</h2>
       {itemsArray.map((i) => (
         <CartItem
           key={i.id}

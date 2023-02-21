@@ -2,7 +2,9 @@
   --primary-color: #71C9CE;
   --secondary-color: #A6E3E9;
   --accent-color: #FCE38A;
-  --primart-light: #E3FDFD;
+  --primary-light: #E3FDFD;
+
+  --radius: 10px;
 }
 
 

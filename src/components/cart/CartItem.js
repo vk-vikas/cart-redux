@@ -1,29 +1,43 @@
-import React from 'react'
-import styles from './CartItem.module.css';
-import {useDispatch} from 'react-redux';
-import {cartActions} from '../../store/cart-slice';
+import React from "react";
+import styles from "./CartItem.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
+
 
 const CartItem = (props) => {
   const dispatch = useDispatch();
-  const incrementHandler = ()=> {
-    dispatch(cartActions.addItem({
-      id: props.id
-    }))
-  }
-  const decrementHandler = ()=> {
-    dispatch(cartActions.removeItem({
-      id: props.id
-    }))
-  }
-  return (
-    <div className={styles.cartitem}>
-    <h3>{props.title}</h3>
-    <p>X{props.quantity}</p>
-    <p>{props.price}</p>
-    <button onClick={incrementHandler}>+</button>
-    <button onClick={decrementHandler}>-</button>
-    </div>
-  )
-}
+  // const cart = useSelector(state => state.cart.items);
 
-export default CartItem
+
+  const incrementHandler = () => {
+    dispatch(
+      cartActions.addItem({
+        id: props.id,
+        title: props.title,
+        price: props.price
+      })
+    );
+  };
+  const decrementHandler = () => {
+    dispatch(
+      cartActions.removeItem(props.id)
+    );
+    
+  };
+  return (
+    
+    <div className={styles.cartitem}>
+      <div>
+        <h3>{props.title}</h3>
+        <p className={styles.quantity}>X{props.quantity}</p>
+        <p className={styles.price}>₹ {props.price}</p>
+      </div>
+      <div>
+        <button className={styles.btn} onClick={incrementHandler}>+</button>
+        <button className={styles.btn} onClick={decrementHandler}>-</button>
+      </div>
+    </div>
+  );
+};
+
+export default CartItem;

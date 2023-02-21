@@ -1,8 +1,32 @@
 .cartitem {
-    background: var(--primart-light);
-    border: 2px solid black;
+    background: var(--primary-light);
     min-width: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+    margin: 10px 0;
+    border-radius: var(--radius);
+}
+
+.btn {
+    border: none;
+    border-radius: var(--radius);
+    background: var(--accent-color);
+    min-width: 40px;
+    min-height: 40px;
+    margin: 0 6px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.quantity {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.5;
 }
