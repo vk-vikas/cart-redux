@@ -1,17 +1,14 @@
 .cart {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
 }
 
 .heading {
-
-    color:  var(--primary-color);
-    border-radius: var(--radius);
-    background: var(--primary-light);
-    padding: 20px 40px;
-
-
+  color: var(--primary-color);
+  border-radius: var(--radius);
+  background: var(--primary-light);
+  padding: 20px 40px;
 }
